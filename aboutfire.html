@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fire-Fist.com</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- for Bootstrap to work -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!-- ^ bootstrap script -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- ^ jquery script -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ^ font awesome script -->
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+
+        @font-face {
+            font-family: fire;
+            src: url(HerokingRegular-51Jm8.ttf);
+        }
+
+        .hero {
+            font-family: fire;
+        }
+
+        .bnone {
+            border: none;
+        }
+
+        .igm {
+            transition: .4s ease;
+            overflow: hidden;
+        }
+
+        .igm:hover {
+            transform: scale(1.10);
+
+        }
+
+        .warn a {
+            color: rgb(218, 165, 53);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid bg-dark">
+        <nav class="navbar navbar-expand-lg bg-dark">
+
+            <a class="navbar-brand hero text-warning" href="#">
+                <h1>Fire-Fist</h1>
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light ms-3 mt-2" aria-current="page"
+                            href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning ms-3 mt-2" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light ms-3 mt-2" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            T-shirts
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tshirts.html">Regular T-shirts</a></li>
+                            <li><a class="dropdown-item" href="oversized.html">Oversized T-shirts</a></li>
+                            <li><a class="dropdown-item" href="hoodies.html">Hoodies & Sweatshirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light ms-2 mt-2" href="onepiece.html">One Piece</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light ms-2 mt-2" href="demon.html">Demon Slayer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light mt-2" href="accessory.html">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light ms-2 mt-2" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
+                            </button>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 text-dark text-center" id="exampleModalLabel">
+                                                Your Cart is Empty</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-warning">Continue Shopping</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success text-warning" type="submit">Search</button>
+                </form>
+            </div>
+
+        </nav>
+
+    </div>
+    <!-- navbar -->
+
+
+
+    <!-- mid-section -->
+    <div class="container text-center py-5">
+        <h1 class="hero pb-3">About <span class="text-warning">Us</span></h1>
+        <p>I thank you for visiting the most underrated page in the history of any website.</p>
+        <h2 class="hero py-3">Know The <span class="text-warning">Brand</span></h2>
+        <p>Fire-Fist is a clothing brand based out of Delhi, N.C.R. Our brand focuses on
+            leveling up our customer's aesthetic vibe with the help of our distinctive designs. * We deal in clothing
+            and stationery and aim to spread the aesthetic, quirky, eccentric, convivial, and kindred vibe in our
+            customer's day-to-day life. We make a limited number of every product to preserve the originality of the
+            designer and the design. What's sold on Fire-Fist is only found on Fire-Fist. The best part about
+            us is that we are 100% MADE IN INDIA, “Shudh Desi''!</p>
+        <h2 class="hero py-3">Know The <span class="text-warning">Founder</span></h2>
+        <p>Moving ahead, Hi guys!
+            I am Jasmeet Gaba, the person behind Fire-Fist. I am a designer by profession and Anime lover by
+            heart. Our motto speaks for us, “Create, don't wait!”.Fire-Fist was created with the sole motive to
+            cater to the need of fun loving people like you! I decided to redefine the T-shirt lines in the country
+            and take it a step further with my passion as the fuel. Eventually, I expanded the category and added a
+            Accessory line under Fire-Fist. Two years down and we are a big family ! Isn't it great?</p>
+        <h2 class="hero py-3">Our <span class="text-warning">Mantra</span></h2>
+        <p>Fire-Fist believes in three mantras, creativity ki koi seema nahi hoti, we aim to create consumer
+            oriented brand and we believe in turning Pie in the sky dreams into reality with the power of talent,
+            creativity and originality.
+            Our aim is to spread unique, new and fancy designs to our customers. So, that they never go off the trend.
+            Consumers are our priority, we make unique, original and ingenious designs for our products to make them
+            stand out in the crowd.
+            We believe in producing a limited number of products with a design, to keep the value and originality of the
+            design and designer intact. </p>
+        <h2 class="hero py-3">Our <span class="text-warning">Story</span></h2>
+        <p>I started this venture back in 2019, initially starting only with Regualar T-shirts, later on I eventually
+            added more
+            categories on receiving your support and love. A year and half later, on huge demand we introduced
+            other categories to our brand and we hit a home run! The designs on our t-shirts and stationeries are
+            exclusive and limited in number. Making them a deal to seal!
+            I want to explore new categories and give them a touch of Midas with my designs, in order to add the
+            boutique vibe to numerous basic products. At present our clothing range is slaying the game and in future we
+            intend to expand it.
+            We started small and now we are here, growing everyday at our own pace, exploring nooks and corners of
+            stationery/clothing, funny, creative, versatile and unique designs.
+            Every product is designed in-house by designers. I try to give life to the monotonous stationeries and
+            clothes with my designs, leaving no stone unturned to make the products unique, relatable and eccentric for
+            you guys!</p>
+        <h2 class="hero py-3">Our <span class="text-warning">Goals</span></h2>
+        <ul>
+            <li>I aim to create and keep designing the products in sync with the trend. I look forward to expanding the
+                range of products and providing more relatable, unique, designer products to the consumers. </li>
+            <li>Compassion, dedication and the love to improve our products and services keep us going. Our team leaves
+                no stone unturned in standing up to our motto and excelling in what we do. The response we got from our
+                consumers has been overwhelming and acted as fuel for us. </li>
+            <li>We aim to develop a community of Kala-Cars where young, hidden talents can spread their wings and fly.
+                Fire-Fist wants to help new artists and designers to achieve the recognition they deserve while keeping
+                their pocket full of sweet cash. We would like to expand our categories to connect the two dots. </li>
+        </ul>
+        
+
+
+
+
+    </div>
+    <!-- mid-section -->
+
+    <!-- footer -->
+
+
+    <div class="container-fluid bg-dark text-warning">
+        <div class="row px-5 py-3">
+            <h1 class="text-center hero">Join The Club</h1>
+            <h5 class="text-center pt-2">Join Our Email List and Get access to special deals exclusive to our
+                subscribers</h5>
+            <div class="mb-5">
+                <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="name@example.com"><br>
+                <button class="btn btn-warning mt-1" style="width: 200px;">Subscribe</button>
+            </div>
+            <div class="col">
+                <h3>Info</h3><br>
+                Email us at care@FireFist.com<br>
+                Contact: +91 98 927 03451<br>
+                Mon-Sat 10AM - 6PM IST
+            </div>
+            <div class="col warn">
+                <h3>Quick Links</h3>
+                <br>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">T-shirts</a></li>
+                    <li><a href="#">Oversixed T-shirts</a></li>
+                    <li><a href="#">Hoodies</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">One-Piece</a></li>
+                    <li><a href="#">Demon Slayer</a></li>
+                </ul>
+
+            </div>
+            <div class="col">
+                <h3>Social</h3>
+                <br>
+                <span>
+                    <i class="fa-brands fa-facebook fa-lg" style="color: #fec700;"></i>&nbsp;
+                    <i class="fa-brands fa-twitter fa-lg" style="color: #fec700;"></i>&nbsp;
+                    <i class="fa-brands fa-instagram fa-lg" style="color: #fec700;"></i>&nbsp;
+                    <i class="fa-brands fa-telegram fa-lg" style="color: #fec700;"></i>
+                </span>
+            </div>
+            <div class="col">
+                <h3>Location</h3>
+                <br>
+                Mc Sidd Razz,<br>
+                221B, Basement,
+                Rampur Community Center<br>
+                New Delhi - 110048<br>
+            </div>
+        </div>
+
+    </div>
+    <!-- footer -->
+
+</body>
