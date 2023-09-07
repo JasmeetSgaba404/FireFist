@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fire-Fist.com</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- for Bootstrap to work -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <!-- ^ bootstrap script -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- ^ jquery script -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ^ font awesome script -->
+
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+
+        @font-face {
+            font-family: fire;
+            src: url(HerokingRegular-51Jm8.ttf);
+        }
+
+        .hero {
+            font-family: fire;
+        }
+
+        .bnone {
+            border: none;
+        }
+
+        .igm {
+            transition: .4s ease;
+            overflow: hidden;
+        }
+
+        .igm:hover {
+            transform: scale(1.10);
+
+        }
+
+        .disp {
+            display: none;
+        }
+
+        .disp:hover {
+            display: block;
+            font-family: hero;
+            width: fit-content;
+            /* transition: .5s ease; */
+        }
+
+        .warn a {
+            color: rgb(218, 165, 53);
+            text-decoration: none;
+        }
+
+        .hid {
+            overflow: hidden;
+        }
+
+        .h {
+            text-decoration: none;
+            color: black;
+        }
+
+        .h:hover {
+            color: #fec700;
+            transform: scale(1.20);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- navigation -->
+    <div class="container-fluid bg-dark">
+        <nav class="navbar navbar-expand-lg bg-dark">
+
+            <a class="navbar-brand hero text-warning" href="#">
+                <h1>Fire-Fist</h1>
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-warning ms-3 mt-2" aria-current="page"
+                            href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light ms-3 mt-2" href="aboutfire.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light ms-3 mt-2" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            T-shirts
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tshirts.html">Regular T-shirts</a></li>
+                            <li><a class="dropdown-item" href="oversized.html">Oversized T-shirts</a></li>
+                            <li><a class="dropdown-item" href="hoodies.html">Hoodies & Sweatshirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light ms-2 mt-2" href="onepiece.html">One Piece</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light ms-2 mt-2" href="demon.html">Demon Slayer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light mt-2" href="accessory.html">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light ms-2 mt-2" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
+                            </button>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 text-dark text-center" id="exampleModalLabel">
+                                                Your Cart is Empty</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-warning">Continue Shopping</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success text-warning" type="submit">Search</button>
+                </form>
+            </div>
+
+        </nav>
+    </div>
+
+    <!-- navigation -->
+
+
+
+    <div class="container-fluid text-center bg-warning text-dark py-1">
+        <h5>Get 10% Off on your first Order. Use Code - <strong>ACE</strong></h5>
+    </div>
+
+    <!-- carousel -->
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="bann1.jpg" class="d-block w-100" style="height: 500px;" alt="img1">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="bann2.webp" class="d-block w-100" style="height: 500px;" alt="img2">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="bann3.png" class="d-block w-100" style="height: 500px;" alt="img3">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="bann4.jpg" class="d-block w-100" style="height: 500px;" alt="img4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- carousel -->
+    <!-- Best Selling Tshirts -->
+
+
+    <div class="container-fluid py-5 px-5 hero hid">
+        <h1 class="text-center">Our Best Selling <span class="text-warning">T-shirts</span></h1>
+        <div class="pt-5"></div>
+        <div class="row">
+            <div class="card bnone me-2" style="width: 18rem;">
+
+                <img src="ts5.webp" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5 ms-3">
+                    <span>Ghost Of Uchiha - Naruto</span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star-half fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 499/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#tshirt1">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="tshirt1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="ts5.webp" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="ts3.jpg" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5 ps-5">
+                    <span>Fire Form - Naruto</span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star-half fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 499/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ts2">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="ts2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="ts3.jpg" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="ts6.jpg" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5">
+                    <span> Uprising Revolt - Bleach
+                    </span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star-half fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 499/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ts3">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="ts3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="ts6.jpg" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="ts12.jpg" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5">
+                    <span>Wrath of Masuka - Wano</span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star-half fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 499/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ts4">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="ts4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="ts12.jpg" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Best Selling Tshirts -->
+    <!-- Best Selling Oversized Tshirts -->
+
+
+    <div class="container-fluid py-5 px-5 hero hid">
+        <h1 class="text-center">Best Selling <span class="text-warning">Oversized</span> T-shirts</h1>
+        <div class="pt-5"></div>
+        <div class="row">
+            <div class="card bnone me-2" style="width: 18rem;">
+
+                <img src="os1.webp" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5">
+                    <span>Bitter Truth - Jujutsu Kaizen </span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 599/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#os1">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="os1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="os1.webp" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="os9.webp" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5 ps-5 ms-4">
+                    <span>Newbies - Demon Slayer</span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 599/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#os2">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="os2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="os9.webp" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="os7.webp" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5 ms-5">
+                    <span>The Cool Ninja - Naruto
+                    </span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 599/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#os3">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="os3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="os7.webp" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="os11.webp" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5">
+                    <span>Scouts Vice Captain - Attack On Titan</span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 599/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#os4">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="os4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="os11.webp" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Best Selling Oversized Tshirts -->
+    <!-- Best Selling hoodies Tshirts -->
+
+
+    <div class="container-fluid py-5 px-5 hero hid">
+        <h1 class="text-center">Our Best Selling <span class="text-warning">Hoodies/Sweatshirts</span></h1>
+        <div class="pt-5"></div>
+        <div class="row">
+            <div class="card bnone me-2" style="width: 18rem;">
+
+                <img src="hod10.jpg" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5">
+                    <span>King of Pirates - One Piece </span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 999/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#hod1">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="hod1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="hod10.jpg" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="hod3.jpg" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5 ps-5">
+                    <span>Twins - One Punch Man</span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 999/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#hod2">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="hod2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="hod3.jpg" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="hod4.jpg" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5 ms-5">
+                    <span>Yamate Kudasai
+                    </span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 999/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#hod3">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="hod3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="hod4.jpg" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="card bnone" style="width: 18rem;">
+
+                <img src="hod7.jpg" alt="tshirt-1" class="igm" height="350" width="300">
+                <div class="card-body text-center fs-5">
+                    <span>Good & Evil - Naruto</span>
+                    <br><span><i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                        <i class="fa-solid fa-star fa-sm" style="color: #fec700;"></i>
+                    </span>
+                    <br><span>
+                        &#8377; &nbsp; 999/-
+                    </span>
+                    <br><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#hod4">Add to
+                        Cart</button>
+                    <!-- modal -->
+                    <div class="modal fade" id="hod4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="hod7.jpg" height="250" width="250">
+                                    Sizes:
+                                    <a href="#" class="h">S</a>,
+                                    <a href="#" class="h">M</a>,
+                                    <a href="#" class="h">L</a>,
+                                    <a href="#" class="h">Xl</a>,
+                                    <a href="#" class="h">XXL</a>,
+                                    <a href="#" class="h">XXXL</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Best Selling hoodies Tshirts -->
+
+    <!-- banner -->
+
+    <div class="card bnone">
+        <img src="banner1.webp" alt="banner" width="100%" height="550">
+
+        <div class="card-img-overlay text-center mt-5 pt-5">
+            <div class="mt-5 pt-5"></div>
+            <div class="mt-5 pt-5"></div>
+            <div class="mt-5 pt-5"></div>
+            <div class="mt-5 pt-5"></div>
+            <a href="tshirts.html" class="btn btn-outline-primary fs-5" style="width: 150px;">SHOP NOW</a>
+        </div>
+    </div>
+
+
+    <!-- banner -->
+
+
+    <!-- shop by Anime -->
+    <div class="container">
+        <div class="row py-5">
+
+
+
+            <div class="card bnone" style="width: 25rem;">
+                <a href="onepiece.html"><img src="art1.jpg" alt="Gear5" width="380" height="550"></a>
+                <div class="card-img-overlay text-center justify-content-center mt-5" style="padding-top: 180px;">
+                    <a class="btn btn-warning hero fs-5" href="onepiece.html">One Piece</a>
+
+                </div>
+            </div>
+
+            <div class="card bnone" style="width: 20rem;"></div>
+
+            <div class="card bnone" style="width: 25rem;">
+                <img src="art22.jpg" alt="RenGoku" width="380" height="550">
+                <div class="card-img-overlay text-center mt-5" style="padding-top: 180px;">
+                    <a class="btn btn-warning hero fs-5" href="demon.html">Demon Slayer</a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- shop by Anime -->
+
+    <!-- banner2 -->
+
+    <div class="container-fluid">
+        <div class="row py-5 bg-warning my-5">
+            <div class="card bnone bg-warning" style="width: 32%;">
+                <img src="delivery.png">
+            </div>
+            <div class="card bnone bg-warning" style="width: 32%;">
+                <img src="quality.png">
+            </div>
+            <div class="card bnone bg-warning" style="width: 32%;">
+                <img src="support.png">
+            </div>
+        </div>
+    </div>
+    <!-- banner2 -->
+
+    <!-- footer -->
+
+    <div class="container-fluid bg-dark text-warning">
+        <div class="row px-2 py-3">
+            <h1 class="text-center hero">Join The Club</h1>
+            <h5 class="text-center pt-2">Join Our Email List and Get access to special deals exclusive to our
+                subscribers</h5>
+            <div class="mb-5">
+                <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="name@example.com"><br>
+                <button class="btn btn-warning mt-1" style="width: 200px;">Subscribe</button>
+            </div>
+            <div class="col">
+                <h3>Info</h3><br>
+                Email us at care@FireFist.com<br>
+                Contact: +91 98 927 03451<br>
+                Mon-Sat 10AM - 6PM IST
+            </div>
+            <div class="col warn">
+                <h3>Quick Links</h3>
+                <br>
+                <ul>
+                    <li><a href="aboutfire.html">About Us</a></li>
+                    <li><a href="tshirts.html">T-shirts</a></li>
+                    <li><a href="oversized.html">Oversixed T-shirts</a></li>
+                    <li><a href="hoodies.html">Hoodies</a></li>
+                    <li><a href="accessory.html">Accessories</a></li>
+                    <li><a href="onepiece.html">One-Piece</a></li>
+                    <li><a href="demon.html">Demon Slayer</a></li>
+                </ul>
+
+            </div>
+            <div class="col">
+                <h3>Social</h3>
+                <br>
+                <span>
+                    <i class="fa-brands fa-facebook fa-lg" style="color: #fec700;"></i>&nbsp;
+                    <i class="fa-brands fa-twitter fa-lg" style="color: #fec700;"></i>&nbsp;
+                    <i class="fa-brands fa-instagram fa-lg" style="color: #fec700;"></i>&nbsp;
+                    <i class="fa-brands fa-telegram fa-lg" style="color: #fec700;"></i>
+                </span>
+            </div>
+            <div class="col">
+                <h3>Location</h3>
+                <br>
+                Mc Sidd Razz,<br>
+                221B, Basement,
+                Rampur Community Center<br>
+                New Delhi - 110048<br>
+            </div>
+        </div>
+
+    </div>
+    <!-- footer -->
+
+</body>
+
+</html>
